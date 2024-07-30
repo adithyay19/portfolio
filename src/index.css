@@ -1,17 +1,12 @@
-:root {
+.app {
   color: aliceblue;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35)); 
 }
 
 .home {
-  /* width: fit-content; */
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
 
-.home h1{
+/* .home h1{
   color: aliceblue;
   overflow: hidden;
   border-right: .15em solid;
@@ -19,7 +14,7 @@
   margin: auto 0;
   animation: typing 5.5s steps(70, end),
   blink-caret .5s step-end infinite;
-}
+} */
 
 @keyframes typing{
   from {width: 0}

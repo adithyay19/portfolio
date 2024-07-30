@@ -1,14 +1,21 @@
+import { Container } from "react-bootstrap";
 import Home from "./Home";
+import About from "./About";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navigation from "./Navigation";
+import Skills from "./Skills";
 
 export default function App() {
   return (
-    <div>
-      <div>
+    <>
+    <Container fluid className="app ">
+      <Navigation />
+      <Container >
         <Home/>
-        <div>About Section</div>
-        <div>Skills Section</div>
-        <div>Projects Section</div>
-      </div>
-    </div>
+        <About  />
+        <Skills/>
+      </Container>
+    </Container>
+    </>
   );
 }
