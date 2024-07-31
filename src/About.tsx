@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 export default function About() {
   return (
-    <Container className="vstack" id="#about">
+    <Container className="vstack" id="about">
       <h3>About</h3>
       <p>
         A CODING ENTHUSIAST WHO ENJOYS PROBLEM SOLVING. CURRENTLY FOCUSING

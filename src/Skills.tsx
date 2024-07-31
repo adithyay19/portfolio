@@ -15,17 +15,11 @@ const skills = [
 
 export default function Skills() {
     return(
-        <Container>
+        <Container id="skills">
+            <h2>Skills</h2>
             <Carousel>
-                {skills.map((skill) => <Carousel.Item interval={1000}>
-                    <Card>
+                {skills.map((skill) => <Carousel.Item interval={2000}>
                         <img src={skill.image} />
-                        <Card.Body>
-
-                        {/* <Card.Title>{skill.name}</Card.Title> */}
-                        </Card.Body>
-                    </Card>
-                    <Carousel.Caption>{skill.name}</Carousel.Caption>
                 </Carousel.Item>)}
                 
             </Carousel>

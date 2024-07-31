@@ -4,16 +4,20 @@ import About from "./About";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "./Navigation";
 import Skills from "./Skills";
+import Projects from "./Projects";
+import Footer from "./Footer";
 
 export default function App() {
   return (
     <>
-    <Container fluid className="app ">
+    <Container fluid className="app">
       <Navigation />
-      <Container >
+      <Container fluid>
         <Home/>
         <About  />
         <Skills/>
+        <Projects />
+        <Footer />
       </Container>
     </Container>
     </>

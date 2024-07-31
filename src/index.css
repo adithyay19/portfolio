@@ -4,6 +4,10 @@
 }
 
 .home {
+  margin-top: 10px;
+  min-height: 75vh;
+  align-items: center;
+  justify-content: center;
 }
 
 /* .home h1{
