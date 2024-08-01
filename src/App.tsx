@@ -12,13 +12,13 @@ export default function App() {
     <>
     <Container fluid className="app">
       <Navigation />
-      <Container fluid>
-        <Home/>
-        <About  />
-        <Skills/>
+      <div className="contents">
+        <Home />
+        <About />
+        <Skills />
         <Projects />
         <Footer />
-      </Container>
+      </div>
     </Container>
     </>
   );

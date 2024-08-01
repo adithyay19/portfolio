@@ -15,7 +15,7 @@ const skills = [
 
 export default function Skills() {
     return(
-        <Container id="skills">
+        <Container fluid id="skills">
             <h2>Skills</h2>
             <Carousel>
                 {skills.map((skill) => <Carousel.Item interval={2000}>

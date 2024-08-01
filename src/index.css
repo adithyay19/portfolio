@@ -1,13 +1,40 @@
-.app {
-  color: aliceblue;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35)); 
+body{
+
 }
 
+.app {
+  color: aliceblue !important;
+  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35)); 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.nav-bar {
+  position: sticky;
+  font-weight: 400;
+  text-transform: uppercase;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  letter-spacing: 0.125rem;
+  margin-top: 0.5rem;
+  border: 1px solid ;
+  border-radius: 20px;
+  text-decoration: aliceblue;
+  background: rgba(255, 255, 255, 0.1);
+  /* background-color: transparent; */
+}
+
+.contents {
+  flex-grow: 1;
+  padding-top: 5em;
+}
+
+
 .home {
-  margin-top: 10px;
-  min-height: 75vh;
-  align-items: center;
-  justify-content: center;
+  /* flex-grow: 1; */
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 /* .home h1{
