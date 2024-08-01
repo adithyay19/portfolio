@@ -33,7 +33,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <Container fluid>
+    <Container fluid className="main-container" id="projects">
       <Row>
         {projects.map((project) => (
           <Col key={project.id}>

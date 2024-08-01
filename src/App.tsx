@@ -10,7 +10,6 @@ import Footer from "./Footer";
 export default function App() {
   return (
     <>
-    <Container fluid className="app">
       <Navigation />
       <div className="contents">
         <Home />
@@ -19,7 +18,6 @@ export default function App() {
         <Projects />
         <Footer />
       </div>
-    </Container>
     </>
   );
 }
