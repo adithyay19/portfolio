@@ -1,12 +1,11 @@
 import { Col, Container, Row } from "react-bootstrap";
 import profileImage from "./profileImage.jpg";
-import { ReactTyped } from "react-typed";
-// E:\Projects\portfolio\src\profileImage.JPG
+
 export default function About() {
   return (
     <Container fluid className="about-section" id="about">
       <Row>
-        <span>About</span>
+        <span className="heading">About</span>
       </Row>
       <Row className="justify-content-center align-items-center">
         <Col md={4} className="text-center">

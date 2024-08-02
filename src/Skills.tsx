@@ -1,6 +1,7 @@
-import { Card, Carousel, Container } from "react-bootstrap";
-import htmlGif from "./Components/Html.gif";
-import cssGif from "./Components/Css.gif";
+import { Container } from "react-bootstrap";
+import htmlGif from "./Components/bg-img.jpeg";
+import cssGif from "./Components/bg-img.jpeg";
+import Marquee from "react-fast-marquee";
 
 const skills = [
     {
@@ -13,16 +14,21 @@ const skills = [
     },
 ]
 
+function SkillCard() {
+    return(
+        <div>
+            
+        </div>
+    );
+}
+
 export default function Skills() {
     return(
-        <Container fluid className="main-container align-items-center justify-content-center" id="skills">
-            <h2>Skills</h2>
-            <Carousel>
-                {skills.map((skill) => <Carousel.Item interval={2000}>
-                        <img src={skill.image} style={{width: "100px"}}/>
-                </Carousel.Item>)}
-                
-            </Carousel>
+        <Container fluid className="skills-section" id="skills">
+            <span className="heading">Skills</span>
+            <Marquee>
+                {skills.map((skill) => <img src={skill.image}/>)}
+            </Marquee>
         </Container>
     );
 }
