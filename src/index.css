@@ -1,5 +1,11 @@
+:root {
+  --primary-color: 
+}
+
 body {
   color: aliceblue !important;
+  /* background: url(Components\bg-img.jpeg) no-repeat; */
+  /* background-size: 100% auto; */
   background: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35)); 
   height: 100vh;
   display: flex;
@@ -12,8 +18,8 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
-  margin-top: 0.5rem;
-  border: 1px solid ;
+  margin: 0.5rem;
+  border: none ;
   border-radius: 20px;
   color: aliceblue !important;
   background: rgba(255, 255, 255, 0.1);
@@ -28,28 +34,46 @@ body {
 
 .home {
   /* background: url(Components\bg-img.jpeg) no-repeat; */
-  background: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35)); 
+  /* background: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));  */
   height: 90vh;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .about-section {
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  font-weight: 600;
+  /* font-weight: 600; */
   align-items: center;
   justify-content: center;
-
-  /* text-transform: uppercase; */
   text-align: center;
+  row-gap: 10rem;
 }
 
-/* .about-section img {
-  width: 15rem;
-  border: none;
-  border-radius: 10rem;
-} */
+.about-section span {
+  font-weight: 600;
+  font-size: 3rem;
+  text-decoration: underline orange;
+  text-underline-offset: 1rem;
+}
+
+.about-section img {
+  height: auto;
+  width: 18rem;
+  image-orientation: flip;
+  cursor: pointer;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  text-align: justify;
+  padding: 2.5rem;
+}
+
+img:hover {
+  border: 2px solid orange;
+}
 
 .main-container {
   height: 100vh;
@@ -58,12 +82,18 @@ body {
 }
 
 .home span {
-  display: flex;
-  flex-direction: column;
+  display: inline;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
+  /* animation: blink-caret .5s step-end infinite; */
+}
+
+.typed-text {
+  font-size: 2rem;
+  color: aliceblue;
 }
 
 /* .home h1{

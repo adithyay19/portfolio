@@ -1,18 +1,23 @@
 import { Col, Container, Row } from "react-bootstrap";
-import profileImage from "./Components/WhatsApp Image 2023-11-26 at 22.34.59_66115f39.jpg";
-// E:\Projects\portfolio\src\Components\WhatsApp Image 2023-11-26 at 22.34.59_66115f39.jpg
+import profileImage from "./profileImage.jpg";
+import { ReactTyped } from "react-typed";
+// E:\Projects\portfolio\src\profileImage.JPG
 export default function About() {
   return (
     <Container fluid className="about-section" id="about">
       <Row>
-        <h3>About</h3>
+        <span>About</span>
       </Row>
-      <Row className="justify-content-center">
-        <Col md={4}>
-          <img src={profileImage} alt="Profile Picture" className="img-fluid rounded-circle"/>
+      <Row className="justify-content-center align-items-center">
+        <Col md={4} className="text-center">
+          <img
+            src={profileImage}
+            alt="Profile Picture"
+            className="rounded-circle float-center"
+          />
         </Col>
         <Col md={8} className="justify-content-center align-items-center">
-          <p style={{textAlign: "justify"}}>
+          <p >
             A CODING ENTHUSIAST WHO ENJOYS PROBLEM SOLVING. CURRENTLY FOCUSING
             ON REACT Typescript. I have completed my Bachelor of Technology in
             Computer Science at Toc H Institute of Science & Technology, where I
