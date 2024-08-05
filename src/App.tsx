@@ -18,6 +18,7 @@ export default function App() {
       <Home />
       <Box>
         <About />
+        <Skills />
       </Box>
     </>
   );

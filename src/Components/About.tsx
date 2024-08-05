@@ -1,10 +1,10 @@
-import { Avatar, Container, Grid } from "@mui/material";
+import { Avatar, Grid } from "@mui/material";
 import avatarImage from "../Assets/profileImage.jpg";
 
 export default function About() {
   return (
     <div className="about-section">
-      <Grid container sx={{justifyContent: "center", alignItems: "center"}}>
+      <Grid container sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
         <Grid item xl={12}>
           <h2 className="heading">About Me</h2>
         </Grid>
