@@ -1,6 +1,5 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { ReactTyped } from "react-typed";
-import Lottie from "lottie-react";
 
 export default function Home() {
   return (
@@ -30,11 +29,12 @@ export default function Home() {
           md={8}
           spacing={0}
         >
-          <Grid item xs={12}>
+          <Grid item xs={12} display="flex" alignItems="center" justifyContent="center">
             <h2>Hello 👋🏻</h2>
           </Grid>
           <Grid item xs={12}>
             <ReactTyped
+              
               strings={["I'm Adithya Prasanth", "React Developer"]}
               typeSpeed={40}
               backSpeed={50}

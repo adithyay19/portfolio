@@ -1,14 +1,23 @@
-import { Box, Container, CssBaseline } from "@mui/material";
+import {
+  Box,
+  Container,
+  CssBaseline,
+  Divider,
+  Grid,
+  Hidden,
+  Stack,
+} from "@mui/material";
 import Home from "./Components/Home";
-
-
+import About from "./Components/About";
+import Skills from "./Components/Skills";
 
 export default function App() {
   return (
     <>
-      <CssBaseline/>
+      <CssBaseline />
+      <Home />
       <Box>
-        <Home/>
+        <About />
       </Box>
     </>
   );
