@@ -50,7 +50,7 @@ export default function Skills() {
         <Grid item md={12}>
           <Marquee className="marquee" autoFill pauseOnHover loop={0}>
             {skills.map((skill) => (
-              <SkillCard name={skill.name} image={skill.image} />
+              <SkillCard key={skill.id} name={skill.name} image={skill.image} />
             ))}
           </Marquee>
         </Grid>

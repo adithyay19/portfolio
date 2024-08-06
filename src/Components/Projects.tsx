@@ -42,7 +42,7 @@ export default function Projects() {
           justifyContent: "center",
         }}>
           {projects.map((project) => (
-            <ProjectCard project={project} />
+            <ProjectCard key={project.id} project={project} />
           ))}
         </Grid>
       </Grid>
