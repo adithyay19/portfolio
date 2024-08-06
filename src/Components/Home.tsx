@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 
 export default function Home() {
   return (
-    <div className="home-section">
+    <div className="home-section" id="home">
       <Grid container alignItems="center" justifyContent="center">
         <Grid
           item

@@ -73,12 +73,8 @@ p{
 
 .skill-card {
   padding-top: 1rem;
-  border: 2px solid #565360;
+  border: 2px solid black;
   /* transition: box-shadow 5s ease-in-out; */
-}
-
-.skill-card:hover {
-  /* box-shadow: 0 0 2rem rgba(209, 10, 10, 0.8); */
 }
 
 .skill-card img {
@@ -91,6 +87,29 @@ p{
   border: 2px solid aqua;
 }
 
+.projects-section {
+  width: 100%;
+  height: fit-content;
+  align-content: center;
+  justify-content: center;
+  padding: 5rem;
+  color: var(--light-bg-color);
+  background: var(--dark-bg-color);
+}
+
+[glow] .project-card {
+  color: aqua;
+  border: 2px solid aqua;
+  box-shadow: 0 0 6rem aqua;
+}
+
+.footer-section {
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  background: #565360;
+}
+
 @media screen and (max-width: 900px) {
   .home-section{
     height: fit-content;
@@ -99,6 +118,10 @@ p{
   }
 
   .about-section{
+    height: fit-content;
+  }
+
+  .skills-section {
     height: fit-content;
   }
 }

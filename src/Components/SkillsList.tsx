@@ -75,3 +75,47 @@ export const skills = [
     },
     
 ];
+
+
+export const projects = [
+    {
+      id: 1,
+      image: "image",
+      title: "To-Do App",
+      detail: "",
+      demo: "",
+      github: "",
+    },
+    {
+      id: 2,
+      image: "image",
+      title: "To-Do App",
+      detail: "",
+      demo: "",
+      github: "",
+    },
+    {
+      id: 3,
+      image: "image",
+      title: "To-Do App",
+      detail: "",
+      demo: "link-of-website",
+      github: "",
+    },
+    {
+      id: 4,
+      image: "image",
+      title: "To-Do App",
+      detail: "",
+      demo: "link-of-website",
+      github: "",
+    },
+    {
+      id: 5,
+      image: "image",
+      title: "To-Do App",
+      detail: "",
+      demo: "",
+      github: "",
+    },
+  ];

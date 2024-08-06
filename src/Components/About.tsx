@@ -3,7 +3,7 @@ import avatarImage from "../Assets/profileImage.jpg";
 
 export default function About() {
   return (
-    <div className="about-section">
+    <div className="about-section" id="about">
       <Grid container sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
         <Grid item xl={12}>
           <h2 className="heading">About Me</h2>
