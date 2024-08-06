@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Fab, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import NavigationIcon from '@mui/icons-material/Navigation';
 
 export default function ScrollToTop() {
