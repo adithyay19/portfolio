@@ -37,10 +37,8 @@ export default function Skills() {
         container
         sx={{
           display: "flex",
-          flexWrap: "wrap",
           justifyContent: "center",
           alignItems: "center",
-          gap: "5rem",
           px: { md: "6rem", xs: "2rem" },
         }}
       >
