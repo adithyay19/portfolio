@@ -1,41 +1,38 @@
 // import { Card, Container } from "react-bootstrap";
 import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Container,
   Grid,
   Paper,
-  Typography,
 } from "@mui/material";
 // import htmlGif from "src/Assets/bg-img.jpeg";
 // import cssGif from "src/Assets/bg-img.jpeg";
-import avatarImage from "../Assets/profileImage.jpg";
 import Marquee from "react-fast-marquee";
 import { skills } from "./SkillsList";
+import { Glow, GlowCapture } from "@codaworks/react-glow";
 // src\Assets\bg-img.jpeg
 
 function SkillCard({ name, image }: any) {
   return (
+    <GlowCapture>
+      <Glow color='hsl(338.69 100% 48.04%)'>
+
     <Paper
     className="skill-card"
-        elevation={12}
-      sx={{
-        width: "15rem",
-        height: "15rem",
-        border: "1px solid red",
-        padding: "1rem",
-        textAlign: "center",
-        marginInline: "1.5rem",
-        
-      }}
+    elevation={6}
+    sx={{
+      width: "10rem",
+      height: "10rem",
+      padding: "1rem",
+      textAlign: "center",
+      marginInline: "1.5rem",
       
+    }}
+    
     >
       <img src={image} alt={`${name}-image`} />
-      <h2>{name}</h2>
+      <h3>{name}</h3>
     </Paper>
+      </Glow>
+    </GlowCapture>
   );
 }
 
@@ -49,7 +46,8 @@ export default function Skills() {
           flexWrap: "wrap",
           justifyContent: "center",
           alignItems: "center",
-          gap: "5rem"
+          gap: "5rem",
+          px: {md: "6rem", xs: "2rem"}
         }}
       >
         <Grid item xl={12}>

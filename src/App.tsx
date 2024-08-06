@@ -17,8 +17,11 @@ export default function App() {
       <CssBaseline />
       <Home />
       <Box>
+        <Divider/>
         <About />
+        <Divider />
         <Skills />
+        <Divider />
       </Box>
     </>
   );
