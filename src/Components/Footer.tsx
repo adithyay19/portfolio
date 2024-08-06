@@ -47,7 +47,3 @@ export default function Footer() {
     </footer>
   );
 }
-function useState(arg0: boolean): [any, any] {
-    throw new Error("Function not implemented.");
-}
-

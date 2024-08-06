@@ -8,7 +8,7 @@ function ProjectCard({project}: any) {
     <Grid item md={3} xs={12}>
       <GlowCapture>
         <Glow>
-          <Card className="project-card" sx={{p: "1rem", border: "2px solid black", display: "flex", flexDirection: "column", alignItems:"center", justifyContent:"center"}}>
+          <Card className="project-card" sx={{p: "1rem", color: "#28282b",border: "2px solid white", display: "flex", flexDirection: "column", alignItems:"center", justifyContent:"center"}}>
             <CardMedia component="img" image={projectImage} height="150px" sx={{objectFit: "contain"}}/>
             <CardContent sx={{alignItems: "center", justifyContent: "center", alignContent: "center"}}>
               <Typography variant="h6" sx={{display: "flex", alignItems: "center", justifyContent: "center"}}>{project.title}</Typography>

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Button from "@mui/material/Button"; // Or any other button library
-import { Fab } from "@mui/material";
+import { useState, useEffect } from "react";
+import { Fab, IconButton } from "@mui/material";
 import NavigationIcon from '@mui/icons-material/Navigation';
 
 export default function ScrollToTop() {
@@ -21,13 +20,13 @@ export default function ScrollToTop() {
   };
 
   return (
-    <Fab onClick={handleClick} sx={{
+    <IconButton onClick={handleClick} sx={{
         display: showButton? 'block':'none',
         position: "fixed",
         bottom: 15,
         right: 15
     }}>
         <NavigationIcon />
-    </Fab>
+    </IconButton>
   );
 }

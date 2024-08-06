@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
   --text-color: #565360;
-  --dark-bg-color: #373b61;
+  --dark-bg-color: #28282b;
   --light-bg-color: #edeffe; 
   --light-primary-text-color: #373b61;
 }
@@ -10,12 +12,15 @@
 }
 
 .heading {
-  font-family: cursive;
+  font-family: "Montserrat", san-serif;
   font-size: 3rem;
   font-weight: 600;
   align-items: center;
   justify-content: center;
   justify-self: center;
+  text-transform: uppercase;
+  
+  text-shadow: 1rem 1rem 7.5px rgba(0,0,0,0.5);
 }
 
 .home-section {
@@ -98,10 +103,10 @@ p{
 }
 
 [glow] .project-card {
-  color: aqua;
-  border: 2px solid aqua;
-  box-shadow: 0 0 6rem aqua;
-}
+  color: black;
+  border: 2px solid black;
+  box-shadow: 2rem 2rem 1rem aqua;
+} 
 
 .footer-section {
   width: 100%;

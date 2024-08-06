@@ -14,8 +14,10 @@ export default function App() {
   return (
     <>
       <CssBaseline />
+      
       <Home />
       <Box>
+        <ScrollToTop/>
         <Divider/>
         <About />
         <Divider />
@@ -25,7 +27,7 @@ export default function App() {
         <Divider />
         <Footer />
       </Box>
-      <ScrollToTop/>
+      
     </>
   );
 }
