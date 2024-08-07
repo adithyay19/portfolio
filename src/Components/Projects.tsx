@@ -28,7 +28,7 @@ function ProjectCard({project}: any) {
 export default function Projects() {
   return (
     <div className="projects-section" id="projects">
-      <Grid container xs={12} sx={{
+      <Grid container sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

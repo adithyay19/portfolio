@@ -11,6 +11,7 @@ import git from "../Assets/svg/git.svg"
 import mysql from "../Assets/svg/mysql.svg"
 import vite from "../Assets/svg/vitejs.svg"
 
+export const pages = ["home", "about", "skills", "projects"];
 
 export const skills = [
     {

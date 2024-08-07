@@ -11,7 +11,7 @@ export default function Footer() {
       <Grid
         container
         spacing={2}
-        xs={12}
+        // xs={12}
         sx={{
           display: "flex",
           flexDirection: { md: "row", xs: "column-reverse" },

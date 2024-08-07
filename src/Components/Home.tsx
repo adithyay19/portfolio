@@ -39,7 +39,7 @@ export default function Home() {
               typeSpeed={75}
               backSpeed={60}
               backDelay={2000}
-              // loop={false}
+              loop
             />
           </Grid>
         </Grid>
