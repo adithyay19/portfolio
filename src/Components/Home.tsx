@@ -35,11 +35,11 @@ export default function Home() {
           <Grid item xs={12}>
             <ReactTyped
               
-              strings={["I'm Adithya Prasanth", "React Developer"]}
-              typeSpeed={40}
-              backSpeed={50}
+              strings={["I'm Adithya Prasanth", "React Developer", "Typescript Developer"]}
+              typeSpeed={75}
+              backSpeed={60}
               backDelay={2000}
-              loop
+              // loop={false}
             />
           </Grid>
         </Grid>
