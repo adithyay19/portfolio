@@ -4,7 +4,7 @@ import { skills } from "./SkillsList";
 import { Glow, GlowCapture } from "@codaworks/react-glow";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Virtual } from "swiper/modules";
 // import { useState, useEffect } from "react";
 
 function SkillCard({ name, image }: any) {
@@ -52,7 +52,7 @@ export default function Skills() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          px: { md: "16rem", xs: "2rem" },
+          px: { md: "16rem", xs: "0rem" },
         }}
       >
         <Grid item xl={12}>
@@ -60,17 +60,19 @@ export default function Skills() {
         </Grid>
         <Grid item md={12}>
           <Swiper
-            spaceBetween={40}
-            slidesPerView={4}
+          className="marquee"
+            spaceBetween={2}
+            slidesPerView={1}
+            virtual
             loop={true}
             autoplay={{
               delay: 1500,
-              disableOnInteraction: true,
+              disableOnInteraction: false,
             }}
-            modules={[Autoplay]}
+            modules={[Autoplay, Virtual]}
           >
             {skills.map((skill) => (
-              <SwiperSlide>
+              <SwiperSlide key={skill.id} virtualIndex={skill.id}>
                 <SkillCard
                   key={skill.id}
                   name={skill.name}

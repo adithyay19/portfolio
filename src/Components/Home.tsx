@@ -2,8 +2,6 @@ import { Grid } from "@mui/material";
 import { ReactTyped } from "react-typed";
 
 export default function Home() {
-  
-
   return (
     <div className="home-section" id="home">
       <Grid container alignItems="center" justifyContent="center">
@@ -22,8 +20,8 @@ export default function Home() {
           />
         </Grid>
         <Grid
-          className="heading"
-          container
+          className="home-text"
+          item
           display="flex"
           flexDirection="column"
           justifyContent="center"
@@ -31,30 +29,19 @@ export default function Home() {
           sm={12}
           md={8}
         >
-          <Grid
-            item
-            xs={12}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-            <h2>Hello 👋🏻</h2>
-          </Grid>
-          <Grid item xs={12}>
-            
-              <ReactTyped
-                strings={[
-                  "I'm Adithya Prasanth",
-                  "React Developer",
-                  "Typescript Developer",
-                ]}
-                typeSpeed={75}
-                backSpeed={60}
-                backDelay={2000}
-                loop
-              />
+          <h3>Hello, I'm </h3>
 
-          </Grid>
+          <ReactTyped
+            strings={[
+              "Adithya Prasanth",
+              "A React Developer",
+              "A Typescript Developer",
+            ]}
+            typeSpeed={75}
+            backSpeed={60}
+            backDelay={2000}
+            loop
+          />
         </Grid>
       </Grid>
     </div>

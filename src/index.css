@@ -17,6 +17,22 @@ html{
   overflow-x: hidden !important;
 }
 
+.navigation-bar{
+  color:var(--dark-bg-color)!important;
+  background: var(--light-bg-color);
+}
+
+.progress-bar {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10vh;
+  background: whitesmoke;
+  transform-origin: 0%;
+}
+
 .heading {
   font-family: "Montserrat", san-serif;
   font-size: 3rem;
@@ -38,9 +54,6 @@ html{
   justify-content: center;
   color:var(--light-bg-color);
   background: var(--dark-bg-color);
-  font-size: 3.5rem;
-  font-family: "Montserrat", san-serif;
-  text-transform: uppercase;
 }
 
 .home-section img{
@@ -56,8 +69,13 @@ html{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 4.5rem;
   font-family: "Montserrat", san-serif;
   text-shadow: 1rem 1rem 7.5px rgba(0,0,0,0.5);
+}
+
+.home-text h3 {
+  font-size: 3rem !important;
 }
 
 /* -----ABOUT SECTION----- */
@@ -117,7 +135,7 @@ p{
 }
 
 /* -----PROJECTS SECTION----- */
-
+ 
 .projects-section {
   width: 100%;
   height: fit-content;
@@ -142,16 +160,28 @@ p{
   height: fit-content;
   padding: 1rem;
   font-family: "Montserrat", san-serif;
-  background: #565360;
+  color:var(--light-primary-text-color);
+  background: whitesmoke;
 }
 
 /* -----RESPONSIVENESS----- */
 
 @media screen and (max-width: 900px) {
+  .progress-bar{
+    /* display: none; */
+  }
+
   .home-section{
-    height: fit-content;
-    font-size: 2rem;
+    height: 100vh;
     padding-top: 3rem;
+  }
+
+  .home-text {
+    font-size: 2rem;
+  }
+
+  .home-text h3 {
+    font-size: 1.5rem;
   }
 
   .home-section img {
@@ -166,7 +196,4 @@ p{
     width: 90%;
     overflow-x: hidden;
   }
-
-
-
 }
