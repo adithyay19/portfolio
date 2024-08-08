@@ -154,6 +154,10 @@ p{
     padding-top: 3rem;
   }
 
+  .home-section img {
+    transition: none;
+  }
+
   .about-section{
     height: fit-content;
   }
@@ -162,5 +166,7 @@ p{
     width: 90%;
     overflow-x: hidden;
   }
+
+
 
 }

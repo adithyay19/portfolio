@@ -1,39 +1,74 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import { pages } from './SkillsList';
+import { sections } from './SkillsList';
 
+interface Props {
+  window?: () => Window;
+}
 
-function NavBar() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+export default function DrawerAppBar(props: Props) {
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(anchorEl ? null : event.currentTarget);
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
   };
 
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        Portfolio
+      </Typography>
+      <Divider />
+      <List>
+        {sections.map((section) => (
+          <ListItem key={section.id} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} href={section.url}>
+              <ListItemText primary={section.name} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <AppBar position="sticky">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters >
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+    <Box sx={{ display: 'flex' }}>
+      <AppBar component="nav">
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
           <Typography
             variant="h6"
             noWrap
             component="a"
             href=""
             sx={{
+              flexGrow: 1,
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: 'flex',
+              justifyContent: {xs:"center", md: "normal"},
               fontFamily: 'Roboto',
               fontWeight: 500,
               letterSpacing: '.2rem',
@@ -42,78 +77,34 @@ function NavBar() {
               textTransform: 'uppercase'
             }}
           >
-            Portfolio : Adithya Prasanth
+          Adithya Prasanth
           </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorEl)}
-              onClose={handleClick}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page.id} onClick={handleClick} href={page.url}>
-                  <Typography textAlign="center">{page.name}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'Roboto',
-              fontWeight: 500,
-              color: 'inherit',
-              textDecoration: 'none',
-              textTransform: 'uppercase'
-            }}
-          >
-            Adithya Prasanth
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "flex-end", gap: "2rem" }}>
-            {pages.map((page) => (
-              <Button
-                key={page.id}
-                href={page.url}
-                
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page.name}
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {sections.map((section) => (
+              <Button key={section.id} href={section.url} sx={{ color: '#fff' }}>
+                {section.name}
               </Button>
             ))}
           </Box>
         </Toolbar>
-      </Container>
-    </AppBar>
+      </AppBar>
+      <nav>
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
+    </Box>
   );
 }
-export default NavBar;

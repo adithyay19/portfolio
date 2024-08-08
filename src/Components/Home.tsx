@@ -3,16 +3,7 @@ import { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  
 
   return (
     <div className="home-section" id="home">
@@ -32,7 +23,7 @@ export default function Home() {
           />
         </Grid>
         <Grid
-          className="home-text"
+          className="heading"
           container
           display="flex"
           flexDirection="column"
@@ -51,9 +42,7 @@ export default function Home() {
             <h2>Hello 👋🏻</h2>
           </Grid>
           <Grid item xs={12}>
-            {isMobile ? (
-              <h2>I'm Adithya Prasanth</h2>
-            ) : (
+            
               <ReactTyped
                 strings={[
                   "I'm Adithya Prasanth",
@@ -65,7 +54,7 @@ export default function Home() {
                 backDelay={2000}
                 loop
               />
-            )}
+
           </Grid>
         </Grid>
       </Grid>
