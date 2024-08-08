@@ -2,7 +2,7 @@ import { Button, Divider, Grid, IconButton, Snackbar, Stack, Typography } from "
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import DownloadIcon from '@mui/icons-material/Download';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
 export default function Footer() {
 
@@ -23,7 +23,7 @@ export default function Footer() {
           <Typography>Designed by Adithya Prasanth</Typography>
         </Grid>
         <Grid item>
-          <Button variant="outlined" endIcon={<DownloadIcon/>} target="_blank" href="https://drive.google.com/file/d/10HuCd-HF-eke23QQCGTAsRDOjb1hYbcQ/view?usp=sharing">Resume</Button>
+          <Button variant="outlined" endIcon={<CloudDownloadIcon/>} target="_blank" href="https://drive.google.com/file/d/10HuCd-HF-eke23QQCGTAsRDOjb1hYbcQ/view?usp=sharing">Resume</Button>
           <Snackbar/>
         </Grid>
         <Grid item>

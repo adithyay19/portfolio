@@ -1,7 +1,19 @@
 import { Grid } from "@mui/material";
+import { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="home-section" id="home">
       <Grid container alignItems="center" justifyContent="center">
@@ -14,12 +26,13 @@ export default function Home() {
           alignItems="center"
         >
           <img
-            src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016" 
+            src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
             alt="home-icon"
             style={{ width: "50%", height: "auto" }}
           />
         </Grid>
         <Grid
+          className="home-text"
           container
           display="flex"
           flexDirection="column"
@@ -27,20 +40,32 @@ export default function Home() {
           alignItems="center"
           sm={12}
           md={8}
-          spacing={0}
         >
-          <Grid item xs={12} display="flex" alignItems="center" justifyContent="center">
+          <Grid
+            item
+            xs={12}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
             <h2>Hello 👋🏻</h2>
           </Grid>
           <Grid item xs={12}>
-            <ReactTyped
-              
-              strings={["I'm Adithya Prasanth", "React Developer", "Typescript Developer"]}
-              typeSpeed={75}
-              backSpeed={60}
-              backDelay={2000}
-              loop
-            />
+            {isMobile ? (
+              <h2>I'm Adithya Prasanth</h2>
+            ) : (
+              <ReactTyped
+                strings={[
+                  "I'm Adithya Prasanth",
+                  "React Developer",
+                  "Typescript Developer",
+                ]}
+                typeSpeed={75}
+                backSpeed={60}
+                backDelay={2000}
+                loop
+              />
+            )}
           </Grid>
         </Grid>
       </Grid>
