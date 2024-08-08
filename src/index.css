@@ -168,9 +168,9 @@ p{
 
 @media screen and (max-width: 900px) {
   .progress-bar{
-    /* display: none; */
+    height: 7vh;
   }
-
+ 
   .home-section{
     height: 100vh;
     padding-top: 3rem;
