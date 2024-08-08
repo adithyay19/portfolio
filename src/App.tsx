@@ -1,7 +1,6 @@
 import {
   Box,
   CssBaseline,
-  Divider,
 } from "@mui/material";
 import Home from "./Components/Home";
 import About from "./Components/About";

@@ -29,6 +29,8 @@ html{
   text-shadow: 1rem 1rem 7.5px rgba(0,0,0,0.5);
 }
 
+/* -----HOME SECTION----- */
+
 .home-section {
   width: 100%;
   height: 90vh;
@@ -42,6 +44,7 @@ html{
 }
 
 .home-section img{
+  cursor: pointer;
   transition:transform 1s ease-in-out;
 }
 
@@ -50,9 +53,14 @@ html{
 }
 
 .home-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Montserrat", san-serif;
   text-shadow: 1rem 1rem 7.5px rgba(0,0,0,0.5);
 }
+
+/* -----ABOUT SECTION----- */
 
 .about-section {
   width: 100%;
@@ -71,6 +79,8 @@ p{
   text-align: justify;
   font-size: 1rem !important;
 }
+
+/* -----SKILLS SECTION----- */
 
 .skills-section {
   width: 100%;
@@ -106,6 +116,8 @@ p{
   border: 2px solid aqua;
 }
 
+/* -----PROJECTS SECTION----- */
+
 .projects-section {
   width: 100%;
   height: fit-content;
@@ -123,6 +135,8 @@ p{
   box-shadow: 2rem 2rem 1rem aqua;
 } 
 
+/* -----FOOTER----- */
+
 .footer-section {
   width: 100%;
   height: fit-content;
@@ -130,6 +144,8 @@ p{
   font-family: "Montserrat", san-serif;
   background: #565360;
 }
+
+/* -----RESPONSIVENESS----- */
 
 @media screen and (max-width: 900px) {
   .home-section{
