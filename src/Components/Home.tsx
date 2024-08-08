@@ -1,5 +1,4 @@
 import { Grid } from "@mui/material";
-import { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
 
 export default function Home() {

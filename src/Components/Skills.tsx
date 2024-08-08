@@ -5,7 +5,7 @@ import { Glow, GlowCapture } from "@codaworks/react-glow";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 function SkillCard({ name, image }: any) {
   return (
@@ -32,16 +32,16 @@ function SkillCard({ name, image }: any) {
 
 export default function Skills() {
 
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  //   handleResize();
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <div className="skills-section" id="skills">
