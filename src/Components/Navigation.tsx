@@ -83,6 +83,7 @@ export default function Navigation (props: Props) {
               mr: 2,
               display: "flex",
               justifyContent: { xs: "center" },
+              fontSize: "1.2rem",
               fontWeight: 500,
               letterSpacing: ".2rem",
               textDecoration: "none",

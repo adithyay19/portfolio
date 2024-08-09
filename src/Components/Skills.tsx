@@ -1,89 +1,99 @@
-import { Grid, Paper } from "@mui/material";
-// import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
+import Slider from "react-slick";
 import { skills } from "./SkillsList";
-import { Glow, GlowCapture } from "@codaworks/react-glow";
-import { Swiper, SwiperSlide } from "swiper/react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "swiper/css";
-import { Autoplay, Virtual } from "swiper/modules";
-// import { useState, useEffect } from "react";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+// import Swiper from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
+import { Grid, Paper } from "@mui/material";
 
 function SkillCard({ name, image }: any) {
   return (
-    <GlowCapture>
-      <Glow color="hsl(338.69 100% 48.04%)">
-        <Paper
-          className="skill-card"
-          elevation={6}
-          sx={{
-            width: "10rem",
-            height: "10rem",
-            padding: "1rem",
-            textAlign: "center",
-            // marginInline: "1.5rem",
-          }}
-        >
-          <img src={image} alt={`${name}-image`} />
-          <h3>{name}</h3>
-        </Paper>
-      </Glow>
-    </GlowCapture>
+    <Paper
+    elevation={0}
+      sx={{
+        
+        background: "none",
+        border: "none",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100%",
+        fontFamily: "Montserrat",
+        color: "whitesmoke",
+        fontSize: {md: "1.5rem", xs: "1rem"},
+      }}
+    >
+      <img src={image} alt={`${name}-image`} />
+      <h3>{name}</h3>
+    </Paper>
   );
 }
 
-export default function Skills({} :any) {
-
-  // const [isMobile, setIsMobile] = useState(false);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
-  //   };
-  //   window.addEventListener("resize", handleResize);
-  //   handleResize();
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+export default function Skills({ sectionVariant }: any) {
 
   return (
-    <div className="skills-section" id="skills">
-      <Grid
-        container
-        rowGap={10}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          px: { md: "10rem", xs: "0rem" },
-        }}
-      >
-        <Grid item xl={12}>
-          <h2 className="heading">Skills</h2>
-        </Grid>
-        <Grid item md={12}>
-          <Swiper
-          className=""
-            spaceBetween={50}
-            slidesPerView={2}
-            slidesPerGroup={2}
-            virtual
-            loop={true}
-            autoplay={{
-              delay: 1500,
-              disableOnInteraction: false,
+    <motion.div
+      className="skills-section"
+      id="skills"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: false, amount: 0.8 }}
+    >
+      <motion.div variants={sectionVariant}>
+        <Grid
+          container
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Grid item>
+            <h2 className="heading">Skills</h2>
+          </Grid>
+          <Grid
+            item
+            sx={{
+              px: { md: "10rem", xs: "1rem" },
+              overflowX: "hidden",
             }}
-            modules={[Autoplay, Virtual]}
           >
-            {skills.map((skill) => (
-              <SwiperSlide key={skill.id} virtualIndex={skill.id}>
-                <SkillCard
-                  key={skill.id}
-                  name={skill.name}
-                  image={skill.image}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            <Swiper
+              effect="coverflow"
+              centeredSlides={true}
+              slidesPerView={3}
+              loop={true}
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 10,
+                modifier: 1,
+                slideShadows: false,
+              }}
+              modules={[Autoplay, EffectCoverflow]}
+            >
+              {skills.map((skill) => (
+                <SwiperSlide>
+                  <SkillCard name={skill.name} image={skill.image} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Grid>
         </Grid>
-      </Grid>
-    </div>
+        {/* <Grid container>
+
+        </Grid> */}
+      </motion.div>
+    </motion.div>
   );
 }

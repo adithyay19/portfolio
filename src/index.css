@@ -103,30 +103,41 @@ p{
 .skills-section {
   width: 100%;
   height: 90vh;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden !important;
+  overflow-y: hidden;
   font-family: "Montserrat", san-serif;
   align-content: center;
   justify-content: center;
   color: var(--light-bg-color);
   background: var(--dark-bg-color);
 }
-
-.marquee {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  display: inline-flex;
-  overflow-x: hidden !important;
+ 
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
 }
 
-.skill-card {
-  padding-top: 1rem;
-  border: 2px solid black;
-  /* transition: box-shadow 5s ease-in-out; */
+.swiper {
+  width: 100%;
+  padding-top: 5rem;
 }
 
-.skill-card img {
-  width: 5rem;
-  height: 5rem;
+.swiper-slide {
+  /* background-position: center; */
+  /* background-size: cover; */
+  background: none;
+  /* display: flex; */
+  height: 15rem;
+}
+
+.swiper-slide img {
+  display: flex;
+  width: 30%;
 }
 
 [glow] .skill-card {
@@ -172,6 +183,8 @@ p{
   background: var(blue);
   bottom: 100px;
 }
+
+
 
 /* -----RESPONSIVENESS----- */
 

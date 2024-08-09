@@ -9,10 +9,12 @@ import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
 import Navigation from "./Components/Navigation";
 import { useScroll, motion, useSpring, Variants } from "framer-motion";
+import { useRef } from "react";
 
 export default function App() {
 
-  const { scrollYProgress } = useScroll();
+  const scrollRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: scrollRef});
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -33,8 +35,13 @@ export default function App() {
     }
   };
 
+    
+
+  
+  
+
   return (
-    <>
+    <div ref={scrollRef} className="scroll-container">
       <CssBaseline />
       <Navigation />
       <motion.div className="progress-bar" style={{scaleX}}/>
@@ -45,7 +52,13 @@ export default function App() {
         <Projects sectionVariant={sectionVariant}/>
         <Footer />
       </Box> 
+      <div className="scrollbar">
+          <motion.div
+            className="scrollbar-thumb"
+            style={{ scaleY: scrollYProgress }}
+          />
+        </div>
       
-    </>
+    </div>
   );
 }
