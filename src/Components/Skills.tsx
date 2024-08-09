@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { skills } from "./SkillsList";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { skills } from "./Lists";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -82,7 +80,7 @@ export default function Skills({ sectionVariant }: any) {
               modules={[Autoplay, EffectCoverflow]}
             >
               {skills.map((skill) => (
-                <SwiperSlide>
+                <SwiperSlide key={skill.id}>
                   <SkillCard name={skill.name} image={skill.image} />
                 </SwiperSlide>
               ))}

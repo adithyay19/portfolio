@@ -49,7 +49,7 @@ export default function App() {
       <Box>
         <About sectionVariant={sectionVariant}/>
         <Skills sectionVariant={sectionVariant}/>
-        <Projects sectionVariant={sectionVariant}/>
+        <Projects/>
         <Footer />
       </Box> 
       <div className="scrollbar">

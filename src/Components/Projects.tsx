@@ -7,27 +7,21 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { projects } from "./SkillsList";
-import { GlowCapture, Glow } from "@codaworks/react-glow";
+import { projects } from "./Lists";
 import projectImage from "../Assets/projectImages/Example.png";
-import { motion } from "framer-motion";
 
-function ProjectCard({ project, sectionVariant }: any) {
+function ProjectCard({ project }: any) {
   return (
     <Grid item md={3} xs={12}>
-      <GlowCapture>
-        <Glow>
-          <motion.div
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: false, amount: 0.8 }}
-          >
-            <motion.div variants={sectionVariant}>
+
+          
               <Card
                 className="project-card"
                 sx={{
                   p: "1rem",
                   color: "#28282b",
+                  
+                  background: "#f5f5f5",
                   border: "2px solid white",
                   display: "flex",
                   flexDirection: "column",
@@ -46,6 +40,7 @@ function ProjectCard({ project, sectionVariant }: any) {
                     alignItems: "center",
                     justifyContent: "center",
                     alignContent: "center",
+                    fontFamily: "Montserrat",
                   }}
                 >
                   <Typography
@@ -71,23 +66,48 @@ function ProjectCard({ project, sectionVariant }: any) {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button variant="outlined" href={project.demo}>
+                  <Button
+                    variant="outlined"
+                    target="_blank"
+                    
+                    href={project.demo}
+                    sx={{
+                      color: "#373b61",
+                      borderColor: "#28282b",
+                      px: 2,
+                      "&:hover": {
+                        color: "whitesmoke",
+                        backgroundColor: "#373b61",
+                        border: 'none'
+                      },
+                    }}
+                  >
                     Demo
                   </Button>
-                  <Button variant="outlined" href={project.github}>
+                  <Button
+                    variant="outlined"
+                    target="_blank"
+                    href={project.github}
+                    sx={{
+                      color: "#373b61",
+                      borderColor: "#28282b",
+                      px: 2,
+                      "&:hover": {
+                        color: "whitesmoke",
+                        backgroundColor: "#373b61",
+                        border: 'none'
+                      },
+                    }}
+                  >
                     Github
                   </Button>
                 </CardActions>
               </Card>
-            </motion.div>
-          </motion.div>
-        </Glow>
-      </GlowCapture>
     </Grid>
   );
 }
 
-export default function Projects({ sectionVariant }: any) {
+export default function Projects() {
   return (
     <div className="projects-section" id="projects">
       <Grid
@@ -114,7 +134,6 @@ export default function Projects({ sectionVariant }: any) {
             <ProjectCard
               key={project.id}
               project={project}
-              sectionVariant={sectionVariant}
             />
           ))}
         </Grid>

@@ -8,7 +8,8 @@ html{
   --text-color: #565360;
   --dark-bg-color: #28282b;
   --light-bg-color: #edeffe; 
-  --light-primary-text-color: #373b61;
+  --dark-primary-color: #f5f5f5;
+  --dark-secondary-text-color: #373b61;
 }
 
 .root {
@@ -19,7 +20,7 @@ html{
 
 .navigation-bar{
   color:var(--dark-bg-color)!important;
-  background: var(--light-bg-color);
+  
 }
 
 .progress-bar {
@@ -52,7 +53,7 @@ html{
   height: 90vh;
   align-content: center;
   justify-content: center;
-  color:var(--light-bg-color);
+  color:var(--dark-primary-color);
   background: var(--dark-bg-color);
 }
 
@@ -86,7 +87,7 @@ html{
   font-family: "Montserrat", san-serif;
   align-content: center;
   justify-content: center;
-  color:var(--light-bg-color);
+  color:var(--dark-primary-color);
   background: var(--dark-bg-color);
   /* border: 1px solid green; */
 }
@@ -110,7 +111,7 @@ p{
   font-family: "Montserrat", san-serif;
   align-content: center;
   justify-content: center;
-  color: var(--light-bg-color);
+  color: var(--dark-primary-color);
   background: var(--dark-bg-color);
 }
  
@@ -131,18 +132,12 @@ p{
   /* background-position: center; */
   /* background-size: cover; */
   background: none;
-  /* display: flex; */
   height: 15rem;
 }
 
 .swiper-slide img {
   display: flex;
   width: 30%;
-}
-
-[glow] .skill-card {
-  color: aqua;
-  border: 2px solid aqua;
 }
 
 /* -----PROJECTS SECTION----- */
@@ -154,15 +149,9 @@ p{
   align-content: center;
   justify-content: center;
   padding: 5rem;
-  color: var(--light-bg-color);
+  color: var(--dark-primary-color);
   background: var(--dark-bg-color);
 }
-
-[glow] .project-card {
-  color: black;
-  border: 2px solid black;
-  box-shadow: 2rem 2rem 1rem aqua;
-} 
 
 /* -----FOOTER----- */
 
@@ -171,7 +160,7 @@ p{
   height: fit-content;
   padding: 1rem;
   font-family: "Montserrat", san-serif;
-  color:var(--light-primary-text-color);
+  color:var(--light-secondary-text-color);
   background: whitesmoke;
 }
 
