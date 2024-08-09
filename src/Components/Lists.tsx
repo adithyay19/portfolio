@@ -13,6 +13,7 @@ import vite from "../Assets/svg/vitejs.svg";
 
 import portfolioImage from "../Assets/projectImages/portfolioImage.jpg";
 import todoappImage from "../Assets/projectImages/todoappImage.jpg";
+import quoteGeneratorImage from "../Assets/projectImages/quoteGeneratorImage.png";
 
 export const sections = [
     {
@@ -107,7 +108,7 @@ export const projects = [
       id: 1,
       image: portfolioImage,
       title: "Portfolio",
-      detail: "A portfolio website built using Vite-React in TypeScript and used MUI, framer.motion and other packages",
+      detail: "A portfolio website built using Vite-React in TypeScript and used MUI, framer.motion and other packages.",
       demo: "https://adithyay19.github.io/portfolio/",
       github: "https://github.com/adithyay19/portfolio",
     },
@@ -115,8 +116,16 @@ export const projects = [
       id: 2,
       image: todoappImage,
       title: "To-Do App",
-      detail: "A to-do website build using React and vanilla CSS",
+      detail: "A to-do website build using React and vanilla CSS.",
       demo: "https://adithyay19.github.io/toDoApp/",
       github: "https://github.com/adithyay19/toDoApp",
+    },
+    {
+      id: 3,
+      image: quoteGeneratorImage,
+      title: "Quote Generator",
+      detail: "A quote generator website build using React, API calls and vanilla CSS.",
+      demo: "https://adithyay19.github.io/quoteGenerator/",
+      github: "https://github.com/adithyay19/quoteGenerator",
     },
   ];

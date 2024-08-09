@@ -22,7 +22,8 @@ function ProjectCard({ project }: any) {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
+          height: "30rem"
         }}
       >
         <CardMedia
@@ -33,18 +34,19 @@ function ProjectCard({ project }: any) {
         />
         <CardContent
           sx={{
-            alignItems: "center",
-            justifyContent: "center",
-            alignContent: "center",
-            fontFamily: "Montserrat",
+            display:"flex",
+            flexDirection:"column",
+            fontFamily: "IBM Plex Sans",
+
           }}
         >
           <Typography
-            variant="h6"
+            variant="h5"
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              textTransform: "uppercase",
             }}
           >
             {project.title}

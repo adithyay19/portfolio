@@ -19,7 +19,7 @@ function SkillCard({ name, image }: any) {
         alignItems: "center",
         justifyContent: "center",
         height: "100%",
-        fontFamily: "Montserrat",
+        fontFamily: "IBM Plex Sans",
         color: "whitesmoke",
         fontSize: { md: "1.5rem", xs: "1rem" },
       }}
