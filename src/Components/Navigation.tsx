@@ -97,7 +97,10 @@ export default function Navigation (props: Props) {
                 className="nav-buttons"
                 key={section.id}
                 onClick={() => handleSectionClick(section.url)}
-                sx={{ color: "#373b61" , fontSize: "1rem", px: 3}}
+                sx={{ color: "#373b61" , fontSize: "1rem", px: 3, '&:hover': {
+                  color: "whitesmoke",
+                  backgroundColor: "#373b61",
+                }}}
               >
                 {section.name}
               </Button>

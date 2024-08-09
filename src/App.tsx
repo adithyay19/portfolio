@@ -8,24 +8,44 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
 import Navigation from "./Components/Navigation";
-import { useScroll, motion } from "framer-motion";
+import { useScroll, motion, useSpring, Variants } from "framer-motion";
 
 export default function App() {
 
   const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+  const sectionVariant: Variants = {
+    offscreen: {
+      y: 100
+    },
+    onscreen: {
+      y: 50,
+      rotate:0,
+      transition: {
+        type: "spring",
+        bounce: 0.8,
+        duration: 1.5
+      }
+    }
+  };
 
   return (
     <>
       <CssBaseline />
       <Navigation />
-      <motion.div className="progress-bar" style={{scaleX: scrollYProgress}}/>
+      <motion.div className="progress-bar" style={{scaleX}}/>
       <Home />
       <Box>
-        <About />
-        <Skills />
-        <Projects />
+        <About sectionVariant={sectionVariant}/>
+        <Skills sectionVariant={sectionVariant}/>
+        <Projects sectionVariant={sectionVariant}/>
         <Footer />
       </Box> 
+      
     </>
   );
 }

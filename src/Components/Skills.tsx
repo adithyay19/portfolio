@@ -19,7 +19,7 @@ function SkillCard({ name, image }: any) {
             height: "10rem",
             padding: "1rem",
             textAlign: "center",
-            marginInline: "1.5rem",
+            // marginInline: "1.5rem",
           }}
         >
           <img src={image} alt={`${name}-image`} />
@@ -30,7 +30,7 @@ function SkillCard({ name, image }: any) {
   );
 }
 
-export default function Skills() {
+export default function Skills({} :any) {
 
   // const [isMobile, setIsMobile] = useState(false);
 
@@ -52,7 +52,7 @@ export default function Skills() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          px: { md: "16rem", xs: "0rem" },
+          px: { md: "10rem", xs: "0rem" },
         }}
       >
         <Grid item xl={12}>
@@ -60,9 +60,10 @@ export default function Skills() {
         </Grid>
         <Grid item md={12}>
           <Swiper
-          className="marquee"
-            spaceBetween={2}
-            slidesPerView={1}
+          className=""
+            spaceBetween={50}
+            slidesPerView={2}
+            slidesPerGroup={2}
             virtual
             loop={true}
             autoplay={{

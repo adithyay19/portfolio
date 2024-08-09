@@ -1,10 +1,21 @@
 import { Avatar, Grid } from "@mui/material";
 import avatarImage from "../Assets/profileImage.jpg";
+import { motion } from "framer-motion";
 
-export default function About() {
+export default function About({ sectionVariant }:any) {
+
+  
   return (
-    <div className="about-section" id="about">
-      <Grid container sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+    
+
+    <motion.div className="about-section" id="about" initial="offscreen" whileInView="onscreen"
+    viewport={{ once: false, amount: 0.8 }}>
+      <motion.div variants={sectionVariant}>
+
+      <Grid
+        container
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        >
         <Grid item xl={12}>
           <h2 className="heading">About Me</h2>
         </Grid>
@@ -12,12 +23,12 @@ export default function About() {
           container
           sx={{
             display: "flex",
-            flexDirection: {md: "row", xs:"column-reverse"},
+            flexDirection: { md: "row", xs: "column-reverse" },
             justifyContent: "center",
             alignItems: "center",
             alignContent: "center",
           }}
-        >
+          >
           <Grid
             item
             sm={12}
@@ -29,7 +40,7 @@ export default function About() {
               pl: { md: "6rem", xs: "1rem" },
               pr: { md: "6rem", xs: "1rem" },
             }}
-          >
+            >
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
               vitae dolor mi. Vivamus vehicula interdum sollicitudin. Aliquam
@@ -55,13 +66,15 @@ export default function About() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              p: {md: "2rem"},
+              p: { md: "2rem" },
             }}
-          >
+            >
             <Avatar src={avatarImage} sx={{ width: "50%", height: "auto" }} />
           </Grid>
         </Grid>
       </Grid>
-    </div>
+              </motion.div>
+    </motion.div>
+            
   );
 }
