@@ -18,10 +18,9 @@ interface Props {
   window?: () => Window;
 }
 
-export default function Navigation (props: Props) {
+export default function Navigation(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -30,7 +29,7 @@ export default function Navigation (props: Props) {
   const handleSectionClick = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -43,7 +42,10 @@ export default function Navigation (props: Props) {
       <List>
         {sections.map((section) => (
           <ListItem key={section.id} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }} onClick={() => handleSectionClick(section.url)}>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => handleSectionClick(section.url)}
+            >
               <ListItemText primary={section.name} />
             </ListItemButton>
           </ListItem>
@@ -56,8 +58,11 @@ export default function Navigation (props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{display: "flex", flexDirection: "column"}}>
-      <AppBar component="nav" sx={{display: "flex", background: "whitesmoke"}}>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <AppBar
+        component="nav"
+        sx={{ display: "flex", background: "whitesmoke" }}
+      >
         <Toolbar
           sx={{
             display: "flex",
@@ -69,7 +74,7 @@ export default function Navigation (props: Props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" }, color:"#373b61" }}
+            sx={{ mr: 2, display: { sm: "none" }, color: "#373b61" }}
           >
             <MenuIcon />
           </IconButton>
@@ -98,10 +103,15 @@ export default function Navigation (props: Props) {
                 className="nav-buttons"
                 key={section.id}
                 onClick={() => handleSectionClick(section.url)}
-                sx={{ color: "#373b61" , fontSize: "1rem", px: 3, '&:hover': {
-                  color: "whitesmoke",
-                  backgroundColor: "#373b61",
-                }}}
+                sx={{
+                  color: "#373b61",
+                  fontSize: "1rem",
+                  px: 3,
+                  "&:hover": {
+                    color: "whitesmoke",
+                    backgroundColor: "#373b61",
+                  },
+                }}
               >
                 {section.name}
               </Button>
@@ -109,7 +119,7 @@ export default function Navigation (props: Props) {
           </Box>
         </Toolbar>
       </AppBar>
-      
+
       <nav>
         <Drawer
           container={container}
@@ -127,7 +137,6 @@ export default function Navigation (props: Props) {
           {drawer}
         </Drawer>
       </nav>
-      
     </Box>
   );
 }

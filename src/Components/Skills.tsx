@@ -3,7 +3,6 @@ import { skills } from "./Lists";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-// import Swiper from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import { Grid, Paper } from "@mui/material";
@@ -11,9 +10,8 @@ import { Grid, Paper } from "@mui/material";
 function SkillCard({ name, image }: any) {
   return (
     <Paper
-    elevation={0}
+      elevation={0}
       sx={{
-        
         background: "none",
         border: "none",
         display: "flex",
@@ -23,7 +21,7 @@ function SkillCard({ name, image }: any) {
         height: "100%",
         fontFamily: "Montserrat",
         color: "whitesmoke",
-        fontSize: {md: "1.5rem", xs: "1rem"},
+        fontSize: { md: "1.5rem", xs: "1rem" },
       }}
     >
       <img src={image} alt={`${name}-image`} />
@@ -33,7 +31,6 @@ function SkillCard({ name, image }: any) {
 }
 
 export default function Skills({ sectionVariant }: any) {
-
   return (
     <motion.div
       className="skills-section"
@@ -87,9 +84,6 @@ export default function Skills({ sectionVariant }: any) {
             </Swiper>
           </Grid>
         </Grid>
-        {/* <Grid container>
-
-        </Grid> */}
       </motion.div>
     </motion.div>
   );

@@ -2,79 +2,80 @@ import { Avatar, Grid } from "@mui/material";
 import avatarImage from "../Assets/profileImage.jpg";
 import { motion } from "framer-motion";
 
-export default function About({ sectionVariant }:any) {
-
-  
+export default function About({ sectionVariant }: any) {
   return (
-    
-
-    <motion.div className="about-section" id="about" initial="offscreen" whileInView="onscreen"
-    viewport={{ once: false, amount: 0.8 }}>
+    <motion.div
+      className="about-section"
+      id="about"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: false, amount: 0.8 }}
+    >
       <motion.div variants={sectionVariant}>
-
-      <Grid
-        container
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-        >
-        <Grid item xl={12}>
-          <h2 className="heading">About Me</h2>
-        </Grid>
         <Grid
           container
           sx={{
             display: "flex",
-            flexDirection: { md: "row", xs: "column-reverse" },
             justifyContent: "center",
             alignItems: "center",
-            alignContent: "center",
           }}
-          >
-          <Grid
-            item
-            sm={12}
-            md={7}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              pl: { md: "6rem", xs: "1rem" },
-              pr: { md: "6rem", xs: "1rem" },
-            }}
-            >
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              vitae dolor mi. Vivamus vehicula interdum sollicitudin. Aliquam
-              nec orci ligula. Maecenas eget pretium metus, non finibus nisi.
-              Pellentesque pellentesque consequat cursus. Aenean sagittis
-              fringilla magna, id facilisis nisi ultrices eu. Vivamus nec ipsum
-              ac velit facilisis efficitur. Mauris odio arcu, sollicitudin ut
-              semper quis, suscipit convallis nisl. Nullam laoreet eget orci in
-              laoreet. Phasellus ornare, tortor at molestie rhoncus, leo dolor
-              vestibulum enim, eget vehicula lacus urna at ante. Aenean
-              tristique sapien vel dolor malesuada dignissim. Sed in felis
-              fermentum, viverra lacus quis, ultrices nulla. Sed vehicula eget
-              nulla non tempus. Maecenas tristique non sem eget laoreet. Duis ut
-              tortor libero. Curabitur a nibh sed risus pulvinar feugiat et ut
-              elit.
-            </p>
+        >
+          <Grid item xl={12}>
+            <h2 className="heading">About Me</h2>
           </Grid>
           <Grid
-            item
-            sm={12}
-            md={5}
+            container
             sx={{
               display: "flex",
+              flexDirection: { md: "row", xs: "column-reverse" },
               justifyContent: "center",
               alignItems: "center",
-              p: { md: "2rem" },
+              alignContent: "center",
             }}
+          >
+            <Grid
+              item
+              sm={12}
+              md={7}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                pl: { md: "6rem", xs: "1rem" },
+                pr: { md: "6rem", xs: "1rem" },
+              }}
             >
-            <Avatar src={avatarImage} sx={{ width: "50%", height: "auto" }} />
+              <p>
+                A coding enthusiast who enjoys problem solving. I am a flexible
+                developer who can switch/learn new domains with ease. Currently
+                focusing on react TS. I have completed my Bachelor of Technology
+                in Computer Science at Toc H Institute of Science & Technology,
+                where I am learning the fundamentals and applications of various
+                programming languages, frameworks, and tools. I was also involved
+                in various extracurricular and co-curricular activities, such as
+                hackathons, workshops, and clubs, where I applied and enhanced my
+                skills and interests. I am motivated by the opportunities and
+                challenges that the field of computer science offers, and I
+                aspire to become a proficient and creative developer in the
+                future.
+              </p>
+            </Grid>
+            <Grid
+              item
+              sm={12}
+              md={5}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                p: { md: "2rem" },
+              }}
+            >
+              <Avatar src={avatarImage} sx={{ width: "50%", height: "auto" }} />
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
-              </motion.div>
+      </motion.div>
     </motion.div>
-            
   );
 }

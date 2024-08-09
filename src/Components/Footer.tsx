@@ -37,10 +37,10 @@ export default function Footer() {
             sx={{
               color: "#373b61",
               px: 2,
-              '&:hover': {
+              "&:hover": {
                 color: "whitesmoke",
-                backgroundColor: "#373b61"
-              }
+                backgroundColor: "#373b61",
+              },
             }}
           >
             Resume
@@ -53,18 +53,42 @@ export default function Footer() {
             divider={<Divider orientation="vertical" flexItem />}
             spacing={2}
           >
-            <IconButton href="https://github.com/adithyay19" target="_blank">
+            <IconButton
+              href="https://github.com/adithyay19"
+              target="_blank"
+              sx={{
+                color: "#373b61",
+                "&:hover": {
+                  color: "whitesmoke",
+                  backgroundColor: "#373b61",
+                },
+              }}
+            >
               <GitHubIcon />
             </IconButton>
             <IconButton
               href="https://www.linkedin.com/in/adithya-prasanth/"
               target="_blank"
+              sx={{
+                color: "#373b61",
+                "&:hover": {
+                  color: "whitesmoke",
+                  backgroundColor: "#373b61",
+                },
+              }}
             >
               <LinkedInIcon />
             </IconButton>
             <IconButton
               href="https://www.instagram.com/__.adithyay.__/"
               target="_blank"
+              sx={{
+                color: "#373b61",               
+                "&:hover": {
+                  color: "whitesmoke",
+                  backgroundColor: "#373b61",
+                },
+              }}
             >
               <InstagramIcon />
             </IconButton>

@@ -1,15 +1,18 @@
-import html from "../Assets/svg/html.svg"
-import css from "../Assets/svg/css.svg"
-import javascript from "../Assets/svg/javascript.svg"
-import react from "../Assets/svg/react.svg"
-import typescript from "../Assets/svg/typescript.svg"
-import materialui from "../Assets/svg/materialui.svg"
-import c from "../Assets/svg/c.svg"
-import cpp from "../Assets/svg/cplusplus.svg"
-import java from "../Assets/svg/java.svg"
-import git from "../Assets/svg/git.svg"
-import mysql from "../Assets/svg/mysql.svg"
-import vite from "../Assets/svg/vitejs.svg"
+import html from "../Assets/svg/html.svg";
+import css from "../Assets/svg/css.svg";
+import javascript from "../Assets/svg/javascript.svg";
+import react from "../Assets/svg/react.svg";
+import typescript from "../Assets/svg/typescript.svg";
+import materialui from "../Assets/svg/materialui.svg";
+import c from "../Assets/svg/c.svg";
+import cpp from "../Assets/svg/cplusplus.svg";
+import java from "../Assets/svg/java.svg";
+import git from "../Assets/svg/git.svg";
+import mysql from "../Assets/svg/mysql.svg";
+import vite from "../Assets/svg/vitejs.svg";
+
+import portfolioImage from "../Assets/projectImages/portfolioImage.jpg";
+import todoappImage from "../Assets/projectImages/todoappImage.jpg";
 
 export const sections = [
     {
@@ -102,17 +105,17 @@ export const skills = [
 export const projects = [
     {
       id: 1,
-      image: "image",
+      image: portfolioImage,
       title: "Portfolio",
-      detail: "A portfolio website built using Vite-React with TS and MUI",
+      detail: "A portfolio website built using Vite-React with TypeScript and MUI",
       demo: "https://adithyay19.github.io/portfolio/",
       github: "https://github.com/adithyay19/portfolio",
     },
     {
       id: 2,
-      image: "image",
+      image: todoappImage,
       title: "To-Do App",
-      detail: "A To-do website build using React and vanilla CSS",
+      detail: "A to-do website build using React and vanilla CSS",
       demo: "https://adithyay19.github.io/toDoApp/",
       github: "https://github.com/adithyay19/toDoApp",
     },

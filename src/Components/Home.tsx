@@ -35,7 +35,6 @@ export default function Home() {
             strings={[
               "Adithya Prasanth",
               "A React Developer",
-              "A Typescript Developer",
             ]}
             typeSpeed={75}
             backSpeed={60}
