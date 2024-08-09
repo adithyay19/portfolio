@@ -107,7 +107,7 @@ export const projects = [
       id: 1,
       image: portfolioImage,
       title: "Portfolio",
-      detail: "A portfolio website built using Vite-React with TypeScript and MUI",
+      detail: "A portfolio website built using Vite-React in TypeScript and used MUI, framer.motion and other packages",
       demo: "https://adithyay19.github.io/portfolio/",
       github: "https://github.com/adithyay19/portfolio",
     },
