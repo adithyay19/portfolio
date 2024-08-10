@@ -34,16 +34,26 @@ export default function Navigation(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Portfolio
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        height: "100%",
+        textAlign: "center",
+        background: "#f5f5f5",
+        color: "#28282b",
+        fontFamily: "IBM Plex Sans",
+        textTransform: "uppercase"
+      }}
+    >
+      <Typography variant="h5" sx={{ my: 2 }}>
+        PORTFOLIO
       </Typography>
       <Divider />
       <List>
         {sections.map((section) => (
           <ListItem key={section.id} disablePadding>
             <ListItemButton
-              sx={{ textAlign: "center" }}
+              sx={{ textAlign: "center", color: "#28282b" }}
               onClick={() => handleSectionClick(section.url)}
             >
               <ListItemText primary={section.name} />
@@ -59,10 +69,7 @@ export default function Navigation(props: Props) {
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <AppBar
-        component="nav"
-        sx={{ display: "flex", background: "whitesmoke" }}
-      >
+      <AppBar component="nav" sx={{ display: "flex", background: "#f5f5f5" }}>
         <Toolbar
           sx={{
             display: "flex",
@@ -108,7 +115,7 @@ export default function Navigation(props: Props) {
                   fontSize: "1rem",
                   px: 3,
                   "&:hover": {
-                    color: "whitesmoke",
+                    color: "#f5f5f5",
                     backgroundColor: "#373b61",
                   },
                 }}
@@ -132,6 +139,9 @@ export default function Navigation(props: Props) {
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": { boxSizing: "border-box", width: 240 },
+            // background: "green",
+            color: "#28282b",
+            fontFamily: "IBM Plex Sans",
           }}
         >
           {drawer}
