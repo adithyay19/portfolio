@@ -57,7 +57,7 @@ function ProjectCard({ project }: any) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              textAlign: "justify",
+              textAlign: "center",
             }}
           >
             {project.detail}

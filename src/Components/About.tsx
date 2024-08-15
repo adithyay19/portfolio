@@ -41,8 +41,9 @@ export default function About({ sectionVariant }: any) {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                pl: { md: "6rem", xs: "1rem" },
-                pr: { md: "0rem", xs: "1rem" },
+                pl: { md: "6rem", xs: "1.2rem" },
+                pr: { md: "0rem", xs: "1.2rem" },
+                textAlign: { md: "justify", xs: "center"}
                 
               }}
             >

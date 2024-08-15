@@ -26,7 +26,7 @@ export default function Footer() {
         }}
       >
         <Grid item>
-          <Typography>Designed with Vite + ReactTS + MUI</Typography>
+          <Typography>Portfolio : Adithya Prasanth</Typography>
         </Grid>
         <Grid item>
           <Button

@@ -124,7 +124,7 @@ export const projects = [
       id: 3,
       image: quoteGeneratorImage,
       title: "Quote Generator",
-      detail: "A quote generator website build using React, API calls and vanilla CSS.",
+      detail: "A random quote generator website build using React and vanilla CSS.",
       demo: "https://adithyay19.github.io/quoteGenerator/",
       github: "https://github.com/adithyay19/quoteGenerator",
     },

@@ -20,11 +20,6 @@ html{
   font-family: "IBM Plex Sans", sans-serif;
 }
 
-.navigation-bar{
-  color:var(--dark-bg-color)!important;
-  
-}
-
 .progress-bar {
   position: sticky;
   z-index: 3;
@@ -91,13 +86,11 @@ html{
   justify-content: center;
   color:var(--dark-primary-color);
   background: var(--dark-bg-color);
-  /* border: 1px solid green; */
 }
 
 
-p{
+p {
   font-family: "IBM Plex Sans", sans-serif;
-  text-align: justify;
   font-size: 1.2rem !important;
 }
 
@@ -131,8 +124,6 @@ p{
 }
 
 .swiper-slide {
-  /* background-position: center; */
-  /* background-size: cover; */
   background: none;
   height: 15rem;
 }
