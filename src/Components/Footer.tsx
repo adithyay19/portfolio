@@ -33,7 +33,7 @@ export default function Footer() {
             variant="text"
             endIcon={<CloudDownloadIcon />}
             target="_blank"
-            href="https://drive.google.com/file/d/1y6hvUxx8nJnlQC-m_F0Miv6GfsNGvOmg/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_isMw9Zx77kx_PyEo3FGUREDPH2nTkeI/view"
             sx={{
               color: "#373b61",
               px: 2,
