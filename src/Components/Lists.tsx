@@ -10,6 +10,7 @@ import java from "../Assets/svg/java.svg";
 import git from "../Assets/svg/git.svg";
 import mysql from "../Assets/svg/mysql.svg";
 import vite from "../Assets/svg/vitejs.svg";
+import csharp from "../Assets/svg/csharp.svg";
 
 import portfolioImage from "../Assets/projectImages/portfolioImage.jpg";
 import todoappImage from "../Assets/projectImages/todoappImage.jpg";
@@ -35,7 +36,7 @@ export const sections = [
         id: 4,
         name: "Projects",
         url: "projects",
-    },
+    }
 ];
 
 export const skills = [
@@ -81,25 +82,29 @@ export const skills = [
     },
     {
         id: 9,
+        name: "C#",
+        image: csharp, 
+    }, 
+    {
+        id: 10,
         name: "Java",
         image: java, 
     },
     {
-        id: 10,
+        id: 11,
         name: "Git",
         image: git, 
     },
     {
-        id: 11,
+        id: 12,
         name: "MySQL",
         image: mysql, 
     },
     {
-        id: 12,
+        id: 13,
         name: "Vite",
         image: vite, 
     },
-    
 ];
 
 
@@ -127,5 +132,5 @@ export const projects = [
       detail: "A random quote generator website build using React and vanilla CSS.",
       demo: "https://adithyay19.github.io/quoteGenerator/",
       github: "https://github.com/adithyay19/quoteGenerator",
-    },
+    }
   ];
