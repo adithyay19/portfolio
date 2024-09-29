@@ -6,11 +6,11 @@ import typescript from "../Assets/svg/typescript.svg";
 import materialui from "../Assets/svg/materialui.svg";
 import c from "../Assets/svg/c.svg";
 import cpp from "../Assets/svg/cplusplus.svg";
+import csharp from "../Assets/svg/csharp.svg";
 import java from "../Assets/svg/java.svg";
 import git from "../Assets/svg/git.svg";
 import mysql from "../Assets/svg/mysql.svg";
 import vite from "../Assets/svg/vitejs.svg";
-import csharp from "../Assets/svg/csharp.svg";
 
 import portfolioImage from "../Assets/projectImages/portfolioImage.jpg";
 import todoappImage from "../Assets/projectImages/todoappImage.jpg";
