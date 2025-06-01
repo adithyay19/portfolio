@@ -43,23 +43,18 @@ export default function About({ sectionVariant }: any) {
                 alignItems: "center",
                 pl: { md: "6rem", xs: "1.2rem" },
                 pr: { md: "0rem", xs: "1.2rem" },
-                textAlign: { md: "justify", xs: "center"}
-                
+                textAlign: { md: "justify", xs: "center" },
               }}
             >
               <p>
                 A coding enthusiast who enjoys problem solving. I am a flexible
-                developer who can switch/learn new domains with ease. Currently
-                focusing on react TS. I have completed my Bachelor of Technology
-                in Computer Science at Toc H Institute of Science & Technology,
-                where I am learning the fundamentals and applications of various
-                programming languages, frameworks, and tools. I was also involved
-                in various extracurricular and co-curricular activities, such as
-                hackathons, workshops, and clubs, where I applied and enhanced my
-                skills and interests. I am motivated by the opportunities and
-                challenges that the field of computer science offers, and I
-                aspire to become a proficient and creative developer in the
-                future.
+                developer who can switch/learn new domains with ease. I am
+                currently employed at Xerox as a software engineer, where I am
+                part of a team building and managing .NET Framework & Core with
+                Razor pages along with MS SQL. I also have a stand-alone role as CI/CD engineer,
+                maintaining and pushing updates into the existing architecture.
+                On my free time, I focus on personal projects based Next.js and
+                Python bots.
               </p>
             </Grid>
             <Grid

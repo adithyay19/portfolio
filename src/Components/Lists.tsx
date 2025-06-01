@@ -15,6 +15,7 @@ import vite from "../Assets/svg/vitejs.svg";
 import portfolioImage from "../Assets/projectImages/portfolioImage.jpg";
 import todoappImage from "../Assets/projectImages/todoappImage.jpg";
 import quoteGeneratorImage from "../Assets/projectImages/quoteGeneratorImage.png";
+import bmiCalculator from "../Assets/projectImages/bmiCalculator.png";
 
 export const sections = [
     {
@@ -132,5 +133,13 @@ export const projects = [
       detail: "A random quote generator website build using React and vanilla CSS.",
       demo: "https://adithyay19.github.io/quoteGenerator/",
       github: "https://github.com/adithyay19/quoteGenerator",
+    },
+    {
+      id: 4,
+      image: bmiCalculator,
+      title: "BMI Calculator",
+      detail: "A bmi calculator website build using React, MUI and vanilla CSS.",
+      demo: "https://adithyay19.github.io/bmiCalculator/",
+      github: "https://github.com/adithyay19/bmiCalculator",
     }
   ];

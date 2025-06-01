@@ -34,7 +34,9 @@ export default function Home() {
           <ReactTyped
             strings={[
               "Adithya Prasanth",
-              "A React Developer",
+              "TypeScript Developer",
+              "Software Engineer Trainee",
+              "CI/CD Engineer"
             ]}
             typeSpeed={75}
             backSpeed={60}
